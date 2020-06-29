@@ -1,6 +1,17 @@
+// 2020.06.29
+    // 7kyu - Halving Sum
+    function halvingSum(n) {
+        let i = 2
+        let sum = n
+        while (n / i >= 1) {
+            sum += Math.floor(n / i)    
+            i = i * 2
+        }
+        return sum
+    }
+
 // 2020.06.12
     // 6kyu - Adjacent repeated words in a string
-
     function countAdjacentPairs(searchString) {
         const string = searchString.toLowerCase()
         const words = string.split(/\s+/)
