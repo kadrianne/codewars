@@ -1,3 +1,12 @@
+// 2020.06.30
+    // LeetCode - 344. Reverse String
+    const reverseString = function(s) {
+        for(let i = 0; i <= s.length-1; i++){
+            s.unshift(s[i])
+            s.splice(i+1,1)
+        }
+    };
+
 // 2020.06.29
     // 7kyu - Halving Sum
     function halvingSum(n) {
