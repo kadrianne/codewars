@@ -1,3 +1,24 @@
+// 2020.07.06
+    // LeetCode - July 6 Challenge - Plus One
+    function plusOne(digits) {
+        let lastDigit = digits.length - 1
+        if (digits[lastDigit] == 9){
+            let i = 0
+            while (digits[lastDigit-i] == 9){
+                digits[lastDigit-i] = 0
+                i++
+            }
+            if (digits[lastDigit-i] >= 0){
+                digits[lastDigit-i] += 1
+            } else {
+                digits.unshift(1)
+            }
+        } else {
+            digits[lastDigit] += 1
+        }
+        return digits
+    };
+
 // 2020.06.30
     // LeetCode - 344. Reverse String
     const reverseString = function(s) {
