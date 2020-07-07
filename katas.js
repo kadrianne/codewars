@@ -1,3 +1,43 @@
+// 2020.07.07
+    // LeetCode - July 7 Challenge - Island Perimeter
+    function islandPerimeter(grid) {
+        const width = grid.length - 1
+        const height = grid[0].length - 1
+        let perimeter = 0
+    
+        for(let x = 0; x <= width; x++){
+            for(let y = 0; y <= height; y++){
+                if(grid[x][y] === 1){
+                    if(x === 0){
+                        perimeter += 1
+                    }
+                    if(y === 0){
+                        perimeter += 1
+                    }
+                    if(x === width){
+                        perimeter += 1
+                    }
+                    if(y === height){
+                        perimeter += 1
+                    }
+                    if(x-1 >= 0 && grid[x-1][y] === 0){
+                        perimeter += 1
+                    }
+                    if(x+1 <= width && grid[x+1][y] === 0){
+                        perimeter += 1
+                    }
+                    if(y-1 >= 0 && grid[x][y-1] === 0){
+                        perimeter += 1
+                    }
+                    if(y+1 <= height && grid[x][y+1] === 0){
+                        perimeter += 1
+                    }
+                }
+            }
+        }
+        return perimeter
+    };
+    
 // 2020.07.06
     // LeetCode - July 6 Challenge - Plus One
     function plusOne(digits) {
