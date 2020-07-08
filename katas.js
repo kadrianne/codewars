@@ -1,3 +1,15 @@
+// 2020.07.08
+    // LeetCode - Two Sum
+    function twoSum(nums, target) {
+        for (let i = 0; i < nums.length - 1; i++) {
+            for (let j = i + 1; j < nums.length; j++) {
+                if (nums[i] + nums[j] == target){
+                    return [i,j]
+                }
+            }
+        }
+    }
+    
 // 2020.07.07
     // LeetCode - July 7 Challenge - Island Perimeter
     function islandPerimeter(grid) {
