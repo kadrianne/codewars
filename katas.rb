@@ -1,3 +1,20 @@
+# 2020.11.30
+  # HackerRank - Sales by Match
+  def sockMerchant(n, ar)
+    paired_socks = {}
+    pairs = 0
+
+    ar.each do |sock|
+        paired_socks[sock] ? paired_socks[sock] = paired_socks[sock] + 1 : paired_socks[sock] = 1
+    end
+
+    paired_socks.each do |(color,socks)|
+        pairs = pairs + socks / 2
+    end
+
+    pairs
+  end
+
 # 2020.09.01
     # 6kyu - Title Case
     def title_case(title, minor_words = '')
