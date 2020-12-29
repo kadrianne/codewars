@@ -1,3 +1,11 @@
+// 2020.12.29
+    // LeetCode - 125. Valid Palindrome
+    function isPalindrome(s) {
+        let concatString = s.replace(/[^0-9a-z]/gi,'').toLowerCase()
+        let reversedString = concatString.split('').reverse().join('').toLowerCase()
+        return concatString === reversedString
+    }
+
 // 2020.07.08
     // LeetCode - Two Sum
     function twoSum(nums, target) {
